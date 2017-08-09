@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CreateUnitDoor xmlns="AdministrativesServices">
+      <SiteName>DemoPMS</SiteName>
+      <DoorName>Test</DoorName>
+      <DoorDescription>Testing MY Door</DoorDescription>
+      <TimeOut>5</TimeOut>
+      <DoorProfileID>2</DoorProfileID>
+      <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <StatusCode>1</StatusCode>
+    </CreateUnitDoor>
+  </soap:Body>
+</soap:Envelope>
+
+
+============= Request XmlAllDoorProfiles Use this method to get a site's profiles list.
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XmlAllDoorProfiles xmlns="AdministrativesServices">
+      <SiteName>DemoPMS</SiteName>
+     <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <StatusCode>1</StatusCode>
+    </XmlAllDoorProfiles>
+  </soap:Body>
+</soap:Envelope>
+
+============= Response 
+
+ 
+<?xml version="1.0" encoding="utf-8" ?>
+<soap:Envelope>
+<soap:Body>
+<XmlAllDoorProfilesResponse>
+<XmlAllDoorProfilesResult>
+<DoorProfilesBasics>
+<DoorProfileName>Kaba Profile 128:4 users</DoorProfileName>
+<DoorProfileID>1</DoorProfileID>
+ </DoorProfilesBasics>
+</XmlAllDoorProfilesResult>
+<StatusCode>0</StatusCode>
+ </XmlAllDoorProfilesResponse>
+</soap:Body>
+</soap:Envelope>
+
+
+=======QueryAllDoorProfiles Use this method to get a site's profiles list.
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <QueryAllDoorProfiles xmlns="AdministrativesServices">
+        <SiteName>DemoPMS</SiteName>
+     <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <DoorProfilesList>Kaba Profile 128:4 users</DoorProfilesList>
+      <StatusCode>1</StatusCode>
+    </QueryAllDoorProfiles>
+  </soap:Body>
+</soap:Envelope>
+
+
+===== Response
+
+<?xml version="1.0" encoding="utf-8" ?>
+<soap:Envelope>
+<soap:Body>
+<QueryAllDoorProfilesResponse>
+<DoorProfilesList>1,Kaba Profile 128:4 users</DoorProfilesList>
+<StatusCode>0</StatusCode>
+ </QueryAllDoorProfilesResponse>
+</soap:Body>
+</soap:Envelope>
+
+========== Request QueryAllSiteDoors
+
+Use this method to get a site's doors list.
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <QueryAllSiteDoors xmlns="AdministrativesServices">
+      <SiteName>DemoPMS</SiteName>
+      <DoorProfileID>1</DoorProfileID>
+      <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <DoorList>1,2</DoorList>
+      <StatusCode>1</StatusCode>
+    </QueryAllSiteDoors>
+  </soap:Body>
+</soap:Envelope>
+
+============ Response
+<?xml version="1.0" encoding="utf-8" ?>
+<soap:Envelope>
+<soap:Body>
+<QueryAllSiteDoorsResponse>
+<DoorList>56445656456456546,AlexM,ApartDirect_Hotsoft I,ApartDirect_Hotsoft II,asd,BackupTest,Barefoot Tech Corp,Barefoot_TestDoor I,Barefoot_TestDoor II,Barefoot_TestDoor III,bh247_TestDoor I,bh247_TestDoor II,bh247_TestDoor III,bookerville_TestDoor I,bookerville_TestDoor II,bookerville_TestDoor III,CENTIUM _Integration,Compass Resorts I,Compass Resorts II,Comtrol_TestDoor,D001,D002,D003,D004,D005,D006,D007,D008,D009,D010,D011,D012,D013,D014,D015,Demo,demo2,FlandersIT_I,FlandersIT_II,Ginosi Apartments,Ginosi Apartments II,homeaway I,homeaway II,homeaway_TestDoor I,homeaway_TestDoor II,homeaway_TestDoor III,itrip_TestDoor I,itrip_TestDoor II,itrip_TestDoor III,KBM_Hawaii I,KBM_Hawaii II,locktech_TestDoor I,locktech_TestDoor II,Locktech_Testdoor2,Master_Door,Maxxton-Dev I,Maxxton-Dev II,mnhomerental,mountainchalets,My test door,MyGuestbook,MyGuestbook a,MyGuestbook asd II,MyGuestbook I,MyGuestbook II,MyGuestbook II 123123,MyGuestbook IIasd,PMS_Req_Resp,Ramsey Solutions I,Ramsey Solutions II,RDP_TestDoor I,RDP_TestDoor II,RMS_TestDoor,rns_TestDoor I,rns_TestDoor II,rns_TestDoor III,skyrun,skyrunTestDoor,smartflats_TestDoor,smartflats_TestDoorI,STARDEKK_I,STARDEKK_II,streamline_D1,streamline_D2,streamline_D3,Test,TestDoor BAL I,TestDoor BAL II,TestDoor I WebRezPro,TestDoor II WebRezPro,TestDoor May 8 MyGuestbo,TestDoor_OwnerRez I,TestDoor_OwnerRez II,Thomas Real I,Thomas Real II,Vacasa I,Vacasa II,WebRezPro_TestDoor I,WebRezPro_TestDoor II,WebRezPro_TestDoor III,wynvr_TestDoor I,wynvr_TestDoor II,wynvr_TestDoor III</DoorList>
+<StatusCode>0</StatusCode>
+ </QueryAllSiteDoorsResponse>
+</soap:Body>
+</soap:Envelope>
+
+====== Request  QueryAllSiteUsers Use this method to get a site's user list.
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <QueryAllSiteUsers xmlns="AdministrativesServices">
+      <SiteName>DemoPMS</SiteName>
+      <DoorName>MyGuestbook II</DoorName>
+      <DoorProfileID>1</DoorProfileID>
+      <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <SiteUserList>string</SiteUserList>
+      <StatusCode>1</StatusCode>
+    </QueryAllSiteUsers>
+  </soap:Body>
+</soap:Envelope>
+
+
+==== Response 
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><QueryAllSiteUsersResponse xmlns="AdministrativesServices"><SiteUserList>Guest RCI 14h-14h,0,Daily,0,Guest ECI 11h-11h,1,Daily,0,Guest LT BW,2,BiWeekly,3,Owner 1 BW,3,BiWeekly,3,Owner 2 BW,4,BiWeekly,3,Owner 3 BW,5,BiWeekly,3,Emergency D M,6,Daily,0,Inspector 1 BW M,7,BiWeekly,3,Inspector 2 BW M,8,BiWeekly,3,Inspector 3 BW M,9,BiWeekly,3,Inspector 4 BW M,10,BiWeekly,3,Inspector 5 BW M,11,BiWeekly,3,Inspector 6 BW M,12,BiWeekly,3,Inspector 7 BW M,13,BiWeekly,3,Inspector 8 BW M,14,BiWeekly,3,Inspector 9 BW M,15,BiWeekly,3,Inspector 10 BW M,16,BiWeekly,3,Inspector 11 BW M,17,BiWeekly,3,Inspector 12 BW M,18,BiWeekly,3,Inspector 13 BW M,19,BiWeekly,3,Inspector 14 BW M,20,BiWeekly,3,Inspector 15 BW M,21,BiWeekly,3,Inspector 16 BW M,22,BiWeekly,3,Inspector 17 BW M,23,BiWeekly,3,Inspector 18 BW M,24,BiWeekly,3,Inspector 19 BW M,25,BiWeekly,3,Inspector 20 BW M,26,BiWeekly,3,Inspector 21 BW M,27,BiWeekly,3,Inspector 22 BW M,28,BiWeekly,3,Maid 1 BW M,29,BiWeekly,3,Maid 2 BW M,30,BiWeekly,3,Maid 3 BW M,31,BiWeekly,3,Maid 4 BW M,32,BiWeekly,3,Maid 5 BW M,33,BiWeekly,3,Maid 6 BW M,34,BiWeekly,3,Maid 7 BW M,35,BiWeekly,3,Maid 8 BW M,36,BiWeekly,3,Maid 9 BW M,37,BiWeekly,3,Maid 10 BW M,38,BiWeekly,3,Maid 11 D M,39,Daily,0,Maid 12 D M,40,Daily,0,Maid 13 D M,41,Daily,0,Maid 14 D M,42,Daily,0,Maid 15 D M,43,Daily,0,Maid 16 D M,44,Daily,0,Maid 17 D M,45,Daily,0,Maid 18 D M,46,Daily,0,Maid 19 D M,47,Daily,0,Maid 20 D M,48,Daily,0,Maid 21 D,49,Daily,0,Vendor 1 D,50,Daily,0,Vendor 2 D,51,Daily,0,Vendor 3 D,52,Daily,0,Vendor 4 D,53,Daily,0,Vendor 5 BW M,54,BiWeekly,3,Vendor 6 BW M,55,BiWeekly,3,Vendor 7 BW M,56,BiWeekly,3,Vendor 8 BW,57,BiWeekly,3,Vendor 9 BW,58,BiWeekly,3,Vendor 10 D,59,Daily,0,Vendor 11 D M,60,Daily,0,Vendor 12 D M,61,Daily,0,Vendor 13 D M,62,Daily,0,Vendor 14 D M,63,Daily,0,User 64 D M,64,Daily,0,User 65 D M,65,Daily,0,User 66 D M,66,Daily,0,User 67 D M,67,Daily,0,User 68 D M,68,Daily,0,User 69 D M,69,Daily,0,User 70 D M,70,Daily,0,User 71 D M,71,Daily,0,User 72 D M,72,Daily,0,User 73 D M,73,Daily,0,User 74 D M,74,Daily,0,User 75 D M,75,Daily,0,User 76 D M,76,Daily,0,User 77 D M,77,Daily,0,User 78 D M,78,Daily,0,User 79 D M,79,Daily,0,User 80 D M,80,Daily,0,User 81 D M,81,Daily,0,User 82 D M,82,Daily,0,User 83 D M,83,Daily,0,User 84 D M,84,Daily,0,User 85 D M,85,Daily,0,User 86 D M,86,Daily,0,User 87 BW M,87,BiWeekly,3,User 88 BW M,88,BiWeekly,3,User 89 BW M,89,BiWeekly,3,User 90 BW M,90,BiWeekly,3,User 91 BW M,91,BiWeekly,3,User 92 BW M,92,BiWeekly,3,User 93 BW M,93,BiWeekly,3,User 94 BW M,94,BiWeekly,3,User 95 BW M,95,BiWeekly,3,User 96 BW M,96,BiWeekly,3,User 97 BW M,97,BiWeekly,3,User 98 BW M,98,BiWeekly,3,User 99 BW,99,BiWeekly,3,User 100 BW,100,BiWeekly,3,User 101 D,101,Daily,0,User 102 D,102,Daily,0,User 103 D,103,Daily,0,User 104 D,104,Daily,0,User 105 D,105,Daily,0,User 106 D,106,Daily,0,User 107 D,107,Daily,0,User 108 D,108,Daily,0,User 109 D,109,Daily,0,User 110 D,110,Daily,0,User 111 D,111,Daily,0,User 112 D,112,Daily,0,User 113 D,113,Daily,0,User 114 D,114,Daily,0,User 115 D,115,Daily,0,User 116 D,116,Daily,0,User 117 D,117,Daily,0,User 118 D,118,Daily,0,User 119 BW M,119,BiWeekly,3,User 120 BW M,120,BiWeekly,3,User 121 BW M,121,BiWeekly,3,User 122 BW M,122,BiWeekly,3,User 123 BW M,123,BiWeekly,3,User 124 BW M,124,BiWeekly,3,User 125 BW M,125,BiWeekly,3,User 126 BW M,126,BiWeekly,3,User 127 BW M,127,BiWeekly,3</SiteUserList><StatusCode>0</StatusCode></QueryAllSiteUsersResponse></soap:Body></soap:Envelope>
+
+
+=== Request  XmlAllDoorProfiles
+
+Use this method to get a site's profiles list.
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XmlAllDoorProfiles xmlns="AdministrativesServices">
+       <SiteName>DemoPMS</SiteName>
+       <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <StatusCode>1</StatusCode>
+    </XmlAllDoorProfiles>
+  </soap:Body>
+</soap:Envelope>
+
+
+=== Response 
+
+<?xml version="1.0" encoding="utf-8" ?>
+<soap:Envelope>
+<soap:Body>
+<XmlAllDoorProfilesResponse>
+<XmlAllDoorProfilesResult>
+<DoorProfilesBasics>
+<DoorProfileName>Kaba Profile 128:4 users</DoorProfileName>
+<DoorProfileID>1</DoorProfileID>
+ </DoorProfilesBasics>
+</XmlAllDoorProfilesResult>
+<StatusCode>0</StatusCode>
+ </XmlAllDoorProfilesResponse>
+</soap:Body>
+</soap:Envelope>
+
+
+
+===== Request  XmlAllSiteDoors
+
+Use this method to get a site's doors list.
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XmlAllSiteDoors xmlns="AdministrativesServices">
+      <DoorProfileID>1</DoorProfileID>
+      <SiteName>DemoPMS</SiteName>
+       <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <StatusCode>1</StatusCode>
+    </XmlAllSiteDoors>
+  </soap:Body>
+</soap:Envelope>
+
+
+====Response 
+
+<?xml version="1.0" encoding="utf-8" ?>
+<soap:Envelope>
+<soap:Body>
+<XmlAllSiteDoorsResponse>
+<XmlAllSiteDoorsResult>
+<string>56445656456456546</string>
+<string>AlexM</string>
+<string>ApartDirect_Hotsoft I</string>
+<string>ApartDirect_Hotsoft II</string>
+<string>asd</string>
+<string>BackupTest</string>
+<string>Barefoot Tech Corp</string>
+<string>Barefoot_TestDoor I</string>
+<string>Barefoot_TestDoor II</string>
+<string>Barefoot_TestDoor III</string>
+<string>bh247_TestDoor I</string>
+<string>bh247_TestDoor II</string>
+<string>bh247_TestDoor III</string>
+<string>bookerville_TestDoor I</string>
+<string>bookerville_TestDoor II</string>
+<string>bookerville_TestDoor III</string>
+<string>CENTIUM _Integration</string>
+<string>Compass Resorts I</string>
+<string>Compass Resorts II</string>
+<string>Comtrol_TestDoor</string>
+<string>D001</string>
+<string>D002</string>
+<string>D003</string>
+<string>D004</string>
+<string>D005</string>
+<string>D006</string>
+<string>D007</string>
+<string>D008</string>
+<string>D009</string>
+<string>D010</string>
+<string>D011</string>
+<string>D012</string>
+<string>D013</string>
+<string>D014</string>
+<string>D015</string>
+<string>Demo</string>
+<string>demo2</string>
+<string>FlandersIT_I</string>
+<string>FlandersIT_II</string>
+<string>Ginosi Apartments</string>
+<string>Ginosi Apartments II</string>
+<string>homeaway I</string>
+<string>homeaway II</string>
+<string>homeaway_TestDoor I</string>
+<string>homeaway_TestDoor II</string>
+<string>homeaway_TestDoor III</string>
+<string>itrip_TestDoor I</string>
+<string>itrip_TestDoor II</string>
+<string>itrip_TestDoor III</string>
+<string>KBM_Hawaii I</string>
+<string>KBM_Hawaii II</string>
+<string>locktech_TestDoor I</string>
+<string>locktech_TestDoor II</string>
+<string>Locktech_Testdoor2</string>
+<string>Master_Door</string>
+<string>Maxxton-Dev I</string>
+<string>Maxxton-Dev II</string>
+<string>mnhomerental</string>
+<string>mountainchalets</string>
+<string>My test door</string>
+<string>MyGuestbook</string>
+<string>MyGuestbook a</string>
+<string>MyGuestbook asd II</string>
+<string>MyGuestbook I</string>
+<string>MyGuestbook II</string>
+<string>MyGuestbook II 123123</string>
+<string>MyGuestbook IIasd</string>
+<string>PMS_Req_Resp</string>
+<string>Ramsey Solutions I</string>
+<string>Ramsey Solutions II</string>
+<string>RDP_TestDoor I</string>
+<string>RDP_TestDoor II</string>
+<string>RMS_TestDoor</string>
+<string>rns_TestDoor I</string>
+<string>rns_TestDoor II</string>
+<string>rns_TestDoor III</string>
+<string>skyrun</string>
+<string>skyrunTestDoor</string>
+<string>smartflats_TestDoor</string>
+<string>smartflats_TestDoorI</string>
+<string>STARDEKK_I</string>
+<string>STARDEKK_II</string>
+<string>streamline_D1</string>
+<string>streamline_D2</string>
+<string>streamline_D3</string>
+<string>Test</string>
+<string>TestDoor BAL I</string>
+<string>TestDoor BAL II</string>
+<string>TestDoor I WebRezPro</string>
+<string>TestDoor II WebRezPro</string>
+<string>TestDoor May 8 MyGuestbo</string>
+<string>TestDoor_OwnerRez I</string>
+<string>TestDoor_OwnerRez II</string>
+<string>Thomas Real I</string>
+<string>Thomas Real II</string>
+<string>Vacasa I</string>
+<string>Vacasa II</string>
+<string>WebRezPro_TestDoor I</string>
+<string>WebRezPro_TestDoor II</string>
+<string>WebRezPro_TestDoor III</string>
+<string>wynvr_TestDoor I</string>
+<string>wynvr_TestDoor II</string>
+<string>wynvr_TestDoor III</string>
+ </XmlAllSiteDoorsResult>
+<StatusCode>0</StatusCode>
+ </XmlAllSiteDoorsResponse>
+</soap:Body>
+</soap:Envelope>
+
+
+===== Request  XmlAllSiteUsers
+
+Use this method to get a site's profiles list.
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XmlAllSiteUsers xmlns="AdministrativesServices">
+	 <SiteName>DemoPMS</SiteName>
+      <DoorName>MyGuestbook II</DoorName>
+      <DoorProfileID>1</DoorProfileID>
+      <LoginName>myguestbook</LoginName>
+      <PassWord>48378bk</PassWord>
+      <SiteUserList>string</SiteUserList>
+      <StatusCode>1</StatusCode>
+    </XmlAllSiteUsers>
+  </soap:Body>
+</soap:Envelope>
+
+
+=== response 
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XmlAllSiteUsersResponse xmlns="AdministrativesServices"><XmlAllSiteUsersResult><SiteUserBasics><SiteUserName>Guest RCI 14h-14h</SiteUserName><UserPrefix>0</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Guest ECI 11h-11h</SiteUserName><UserPrefix>1</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Guest LT BW</SiteUserName><UserPrefix>2</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Owner 1 BW</SiteUserName><UserPrefix>3</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Owner 2 BW</SiteUserName><UserPrefix>4</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Owner 3 BW</SiteUserName><UserPrefix>5</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Emergency D M</SiteUserName><UserPrefix>6</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 1 BW M</SiteUserName><UserPrefix>7</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 2 BW M</SiteUserName><UserPrefix>8</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 3 BW M</SiteUserName><UserPrefix>9</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 4 BW M</SiteUserName><UserPrefix>10</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 5 BW M</SiteUserName><UserPrefix>11</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 6 BW M</SiteUserName><UserPrefix>12</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 7 BW M</SiteUserName><UserPrefix>13</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 8 BW M</SiteUserName><UserPrefix>14</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 9 BW M</SiteUserName><UserPrefix>15</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 10 BW M</SiteUserName><UserPrefix>16</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 11 BW M</SiteUserName><UserPrefix>17</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 12 BW M</SiteUserName><UserPrefix>18</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 13 BW M</SiteUserName><UserPrefix>19</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 14 BW M</SiteUserName><UserPrefix>20</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 15 BW M</SiteUserName><UserPrefix>21</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 16 BW M</SiteUserName><UserPrefix>22</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 17 BW M</SiteUserName><UserPrefix>23</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 18 BW M</SiteUserName><UserPrefix>24</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 19 BW M</SiteUserName><UserPrefix>25</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 20 BW M</SiteUserName><UserPrefix>26</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 21 BW M</SiteUserName><UserPrefix>27</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Inspector 22 BW M</SiteUserName><UserPrefix>28</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 1 BW M</SiteUserName><UserPrefix>29</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 2 BW M</SiteUserName><UserPrefix>30</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 3 BW M</SiteUserName><UserPrefix>31</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 4 BW M</SiteUserName><UserPrefix>32</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 5 BW M</SiteUserName><UserPrefix>33</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 6 BW M</SiteUserName><UserPrefix>34</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 7 BW M</SiteUserName><UserPrefix>35</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 8 BW M</SiteUserName><UserPrefix>36</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 9 BW M</SiteUserName><UserPrefix>37</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 10 BW M</SiteUserName><UserPrefix>38</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 11 D M</SiteUserName><UserPrefix>39</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 12 D M</SiteUserName><UserPrefix>40</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 13 D M</SiteUserName><UserPrefix>41</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 14 D M</SiteUserName><UserPrefix>42</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 15 D M</SiteUserName><UserPrefix>43</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 16 D M</SiteUserName><UserPrefix>44</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 17 D M</SiteUserName><UserPrefix>45</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 18 D M</SiteUserName><UserPrefix>46</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 19 D M</SiteUserName><UserPrefix>47</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 20 D M</SiteUserName><UserPrefix>48</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Maid 21 D</SiteUserName><UserPrefix>49</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 1 D</SiteUserName><UserPrefix>50</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 2 D</SiteUserName><UserPrefix>51</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 3 D</SiteUserName><UserPrefix>52</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 4 D</SiteUserName><UserPrefix>53</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 5 BW M</SiteUserName><UserPrefix>54</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 6 BW M</SiteUserName><UserPrefix>55</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 7 BW M</SiteUserName><UserPrefix>56</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 8 BW</SiteUserName><UserPrefix>57</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 9 BW</SiteUserName><UserPrefix>58</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 10 D</SiteUserName><UserPrefix>59</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 11 D M</SiteUserName><UserPrefix>60</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 12 D M</SiteUserName><UserPrefix>61</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 13 D M</SiteUserName><UserPrefix>62</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>Vendor 14 D M</SiteUserName><UserPrefix>63</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 64 D M</SiteUserName><UserPrefix>64</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 65 D M</SiteUserName><UserPrefix>65</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 66 D M</SiteUserName><UserPrefix>66</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 67 D M</SiteUserName><UserPrefix>67</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 68 D M</SiteUserName><UserPrefix>68</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 69 D M</SiteUserName><UserPrefix>69</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 70 D M</SiteUserName><UserPrefix>70</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 71 D M</SiteUserName><UserPrefix>71</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 72 D M</SiteUserName><UserPrefix>72</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 73 D M</SiteUserName><UserPrefix>73</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 74 D M</SiteUserName><UserPrefix>74</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 75 D M</SiteUserName><UserPrefix>75</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 76 D M</SiteUserName><UserPrefix>76</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 77 D M</SiteUserName><UserPrefix>77</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 78 D M</SiteUserName><UserPrefix>78</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 79 D M</SiteUserName><UserPrefix>79</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 80 D M</SiteUserName><UserPrefix>80</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 81 D M</SiteUserName><UserPrefix>81</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 82 D M</SiteUserName><UserPrefix>82</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 83 D M</SiteUserName><UserPrefix>83</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 84 D M</SiteUserName><UserPrefix>84</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 85 D M</SiteUserName><UserPrefix>85</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 86 D M</SiteUserName><UserPrefix>86</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 87 BW M</SiteUserName><UserPrefix>87</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 88 BW M</SiteUserName><UserPrefix>88</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 89 BW M</SiteUserName><UserPrefix>89</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 90 BW M</SiteUserName><UserPrefix>90</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 91 BW M</SiteUserName><UserPrefix>91</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 92 BW M</SiteUserName><UserPrefix>92</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 93 BW M</SiteUserName><UserPrefix>93</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 94 BW M</SiteUserName><UserPrefix>94</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 95 BW M</SiteUserName><UserPrefix>95</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 96 BW M</SiteUserName><UserPrefix>96</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 97 BW M</SiteUserName><UserPrefix>97</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 98 BW M</SiteUserName><UserPrefix>98</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 99 BW</SiteUserName><UserPrefix>99</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 100 BW</SiteUserName><UserPrefix>100</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 101 D</SiteUserName><UserPrefix>101</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 102 D</SiteUserName><UserPrefix>102</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 103 D</SiteUserName><UserPrefix>103</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 104 D</SiteUserName><UserPrefix>104</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 105 D</SiteUserName><UserPrefix>105</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 106 D</SiteUserName><UserPrefix>106</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 107 D</SiteUserName><UserPrefix>107</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 108 D</SiteUserName><UserPrefix>108</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 109 D</SiteUserName><UserPrefix>109</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 110 D</SiteUserName><UserPrefix>110</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 111 D</SiteUserName><UserPrefix>111</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 112 D</SiteUserName><UserPrefix>112</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 113 D</SiteUserName><UserPrefix>113</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 114 D</SiteUserName><UserPrefix>114</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 115 D</SiteUserName><UserPrefix>115</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 116 D</SiteUserName><UserPrefix>116</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 117 D</SiteUserName><UserPrefix>117</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 118 D</SiteUserName><UserPrefix>118</UserPrefix><StayType>0</StayType><StayName>Daily</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 119 BW M</SiteUserName><UserPrefix>119</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 120 BW M</SiteUserName><UserPrefix>120</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 121 BW M</SiteUserName><UserPrefix>121</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 122 BW M</SiteUserName><UserPrefix>122</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 123 BW M</SiteUserName><UserPrefix>123</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 124 BW M</SiteUserName><UserPrefix>124</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 125 BW M</SiteUserName><UserPrefix>125</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 126 BW M</SiteUserName><UserPrefix>126</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics><SiteUserBasics><SiteUserName>User 127 BW M</SiteUserName><UserPrefix>127</UserPrefix><StayType>3</StayType><StayName>BiWeekly</StayName></SiteUserBasics></XmlAllSiteUsersResult><StatusCode>0</StatusCode></XmlAllSiteUsersResponse></soap:Body></soap:Envelope>

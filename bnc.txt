@@ -1,0 +1,38 @@
+
+paragfromdibrugarh
+cd /opt/cakephp/cake/console
+ ./cake clone_contest
+
+mkdir /mnt/xvdb1/assets/
+chown -R www-data:www-data /mnt/xvdb1/assets/1082
+chmod 777 /mnt/xvdb1/assets/
+ mkdir /var/www/img/
+chown -R www-data:www-data /var/www/img/1082
+
+SELECT n.`id`,n.`is_base_fee_paid`,n.`base_fee_amount` FROM `newspapers` n
+JOIN `contests_newspapers` cn ON cn.`newspaper_id`=n.`id`
+WHERE cn.`contest_id`=1098
+
+UPDATE `newspapers` n
+JOIN `contests_newspapers` cn ON cn.`newspaper_id`=n.`id`
+SET n.`is_base_fee_paid`=0,n.`base_fee_amount`=NULL
+WHERE cn.`contest_id`=
+
+DELETE FROM judges WHERE contest_id=
+
+SELECT * FROM contests WHERE NAME LIKE '%%'
+
+mysqldump -h 10.223.208.22 -u root -pRev16_16 bnc | gzip > dbbackup12-10-2016.sql.gz
+
+
+2017 Kansas Scholastic Press Association State Contest  1238
+
+KSPA Monthly Contest August-Sept 2017  1267
+
+Last year's contest names: 
+1. 2016 MNA Better Newspaper Contest 1097
+2. 2016 MNA College Better Newspaper Contest 1098
+
+This year's contest names: 
+1. 2017 MNA Better Newspaper Contest  1268 
+2. 2017 MNA College Better Newspaper Contest  1269

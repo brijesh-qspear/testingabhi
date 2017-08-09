@@ -1,0 +1,41 @@
+/*
+SQLyog Ultimate v9.30 
+MySQL - 5.7.9 : Database - myguestbook
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`myguestbook` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `myguestbook`;
+
+/*Table structure for table `activity_category` */
+
+DROP TABLE IF EXISTS `activity_category`;
+
+CREATE TABLE `activity_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `touricoCategoryId` int(11) DEFAULT NULL,
+  `viatorCategoryId` int(11) DEFAULT NULL,
+  `viatorSubcategoryId` int(11) DEFAULT NULL,
+  `sort` int(11) NOT NULL DEFAULT '0',
+  `active` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `activity_category` */
+
+insert  into `activity_category`(`id`,`name`,`touricoCategoryId`,`viatorCategoryId`,`viatorSubcategoryId`,`sort`,`active`) values (1,'Boat Tours',584,3,NULL,7,1),(2,'Sightseeing Tours',585,4,NULL,6,1),(3,'Shopping Tours',580,10,NULL,15,1),(4,'Packages & Combo Tours',598,18,NULL,10,1),(5,'Dinner Show',582,NULL,NULL,17,1),(6,'Attraction Passes',588,8,NULL,2,1),(7,'Theater & Concerts',586,11,NULL,18,1),(8,'Shared Transfer',601,5,NULL,23,1),(9,'Private Transfer',602,15,NULL,24,1),(10,'Theme Parks',592,14,NULL,1,1),(11,'Restaurants',589,6,NULL,16,1),(12,'Air Tours',587,1,NULL,8,1),(13,'Multiple Day Guided Tours',622,20,NULL,9,1),(14,'Recreational Rentals',583,NULL,NULL,19,1),(15,'Museum',728,NULL,NULL,4,1),(16,'Other',693,NULL,NULL,25,1),(17,'Watersports',595,17,NULL,11,1),(18,'Golf Tours',NULL,NULL,NULL,13,1),(19,'Classes\r\n',NULL,26051,NULL,21,1),(20,'Family Friendly Activity and Tours\r\n',NULL,21,NULL,5,1),(21,'Festival Activities\r\n',NULL,7,NULL,14,1),(22,'Adventure Tours\r\n',NULL,9,NULL,3,1),(23,'Baths and Spas\r\n',NULL,5335,NULL,20,1),(24,'Vehicle Rental\r\n',NULL,12,NULL,22,1),(25,'Private Tours\r\n',NULL,26,NULL,12,1);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
